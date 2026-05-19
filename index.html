@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    Rohit R Chauhan | Founder of InGood & Adaptive Investing Innovator
+  </title>
+
+  <meta
+    name="description"
+    content="Learn about Rohit R Chauhan, founder of InGood, and his vision for adaptive investing, behavioral finance, and smarter wealth creation systems."
+  >
+
+  <link
+    rel="canonical"
+    href="https://rohitrchauhan.vercel.app/"
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Outfit',sans-serif;
+      background:#f5fff9;
+      color:#0f172a;
+      overflow-x:hidden;
+      position:relative;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    .bg-circle{
+      position:fixed;
+      width:420px;
+      height:420px;
+      border-radius:50%;
+      filter:blur(120px);
+      z-index:-1;
+      opacity:.5;
+      animation:float 8s infinite alternate ease-in-out;
+    }
+
+    .circle1{
+      background:#00ff88;
+      top:-120px;
+      left:-120px;
+    }
+
+    .circle2{
+      background:#4ade80;
+      bottom:-120px;
+      right:-120px;
+    }
+
+    @keyframes float{
+      from{
+        transform:translateY(0px);
+      }
+      to{
+        transform:translateY(40px);
+      }
+    }
+
+    .container{
+      width:92%;
+      max-width:1250px;
+      margin:auto;
+    }
+
+    /* HERO */
+
+    .hero{
+      padding:80px 0 40px;
+    }
+
+    .hero-card{
+      display:grid;
+      grid-template-columns:420px 1fr;
+      gap:45px;
+      align-items:center;
+      background:rgba(255,255,255,0.55);
+      backdrop-filter:blur(18px);
+      border:1px solid rgba(255,255,255,.7);
+      border-radius:35px;
+      padding:40px;
+      box-shadow:0 20px 50px rgba(0,0,0,.06);
+      animation:fadeUp 1s ease;
+    }
+
+    .profile-image{
+      width:100%;
+      height:520px;
+      border-radius:28px;
+      overflow:hidden;
+      position:relative;
+    }
+
+    .profile-image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:.5s;
+    }
+
+    .profile-image:hover img{
+      transform:scale(1.05);
+    }
+
+    .hero-content h1{
+      font-size:68px;
+      line-height:1.05;
+      margin-bottom:18px;
+      font-weight:800;
+    }
+
+    .hero-content h1 span{
+      color:#00b86b;
+    }
+
+    .hero-content h2{
+      color:#00a86b;
+      font-size:24px;
+      margin-bottom:25px;
+      font-weight:500;
+    }
+
+    .hero-content p{
+      font-size:18px;
+      line-height:1.9;
+      color:#475569;
+      margin-bottom:30px;
+    }
+
+    .btn-group{
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:14px 28px;
+      border-radius:50px;
+      text-decoration:none;
+      font-weight:600;
+      transition:.4s ease;
+    }
+
+    .primary-btn{
+      background:#00b86b;
+      color:#fff;
+      box-shadow:0 10px 25px rgba(0,184,107,.25);
+    }
+
+    .primary-btn:hover{
+      transform:translateY(-4px);
+      background:#009f5d;
+    }
+
+    .secondary-btn{
+      border:1px solid #00b86b;
+      color:#00b86b;
+      background:#fff;
+    }
+
+    .secondary-btn:hover{
+      background:#00b86b;
+      color:#fff;
+    }
+
+    /* SECTION */
+
+    section{
+      padding:35px 0;
+    }
+
+    .section-title{
+      font-size:42px;
+      margin-bottom:25px;
+      font-weight:700;
+      position:relative;
+      display:inline-block;
+    }
+
+    .section-title::after{
+      content:'';
+      width:70%;
+      height:5px;
+      border-radius:20px;
+      background:#00c874;
+      position:absolute;
+      left:0;
+      bottom:-8px;
+    }
+
+    .content-box{
+      background:rgba(255,255,255,0.55);
+      backdrop-filter:blur(16px);
+      border:1px solid rgba(255,255,255,.7);
+      border-radius:30px;
+      padding:35px;
+      box-shadow:0 15px 40px rgba(0,0,0,.05);
+      animation:fadeUp 1.1s ease;
+    }
+
+    .content-box p{
+      font-size:17px;
+      line-height:2;
+      color:#475569;
+      margin-bottom:22px;
+    }
+
+    .content-link{
+      color:#00a86b;
+      text-decoration:none;
+      font-weight:600;
+    }
+
+    .content-link:hover{
+      color:#008f5c;
+    }
+
+    /* TIMELINE */
+
+    .timeline{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:25px;
+      margin-top:20px;
+    }
+
+    .timeline-card{
+      background:#ffffff;
+      border-radius:25px;
+      padding:28px;
+      box-shadow:0 12px 30px rgba(0,0,0,.05);
+      transition:.4s ease;
+      border:1px solid #ecfdf5;
+    }
+
+    .timeline-card:hover{
+      transform:translateY(-8px);
+    }
+
+    .timeline-card h3{
+      color:#00a86b;
+      margin-bottom:15px;
+      font-size:24px;
+    }
+
+    .timeline-card p{
+      line-height:1.8;
+      color:#475569;
+    }
+
+    /* QUOTE */
+
+    .quote-box{
+      margin-top:30px;
+      padding:40px;
+      border-radius:30px;
+      background:linear-gradient(135deg,#00b86b,#0f172a);
+      color:#fff;
+      text-align:center;
+      box-shadow:0 20px 40px rgba(0,0,0,.08);
+      animation:fadeUp 1.2s ease;
+    }
+
+    .quote-box h3{
+      font-size:34px;
+      margin-bottom:18px;
+      font-weight:700;
+    }
+
+    .quote-box p{
+      font-size:18px;
+      line-height:1.9;
+      max-width:850px;
+      margin:auto;
+      opacity:.95;
+    }
+
+    /* FOOTER */
+
+    footer{
+      padding:35px 0;
+      text-align:center;
+      margin-top:20px;
+      color:#475569;
+    }
+
+    /* ANIMATION */
+
+    @keyframes fadeUp{
+      from{
+        opacity:0;
+        transform:translateY(50px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0px);
+      }
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:900px){
+
+      .hero-card{
+        grid-template-columns:1fr;
+      }
+
+      .hero-content h1{
+        font-size:48px;
+      }
+
+      .profile-image{
+        height:380px;
+      }
+
+      .section-title{
+        font-size:34px;
+      }
+
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <div class="bg-circle circle1"></div>
+  <div class="bg-circle circle2"></div>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="container">
+
+      <div class="hero-card">
+
+        <div class="profile-image">
+
+          <img
+            src="https://rohitrchauhan.vercel.app/assests/1765867695644.jpg"
+            alt="Rohit R Chauhan"
+          >
+
+        </div>
+
+        <div class="hero-content">
+
+          <h1>
+            Rohit R <span>Chauhan</span>
+          </h1>
+
+          <h2>
+            Founder of InGood & Adaptive Investing Innovator
+          </h2>
+
+          <p>
+            Building modern investing systems designed around real-life
+            financial behavior, flexibility, liquidity, and sustainable
+            wealth creation.
+          </p>
+
+          <div class="btn-group">
+
+            <a
+              href="https://www.linkedin.com/in/rohit-r-chauhan-19904852/"
+              target="_blank"
+              class="btn primary-btn"
+            >
+              Connect on LinkedIn
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/rohit-r-chauhan-19904852/"
+              target="_blank"
+              class="btn primary-btn"
+            >
+              LinkedIn Profile
+            </a>
+
+            <a
+              href="https://ingood.in/?utm_source=chatgpt.com"
+              target="_blank"
+              class="btn secondary-btn"
+            >
+              Visit InGood
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section>
+
+    <div class="container">
+
+      <h2 class="section-title">
+        About
+      </h2>
+
+      <div class="content-box">
+
+        <p>
+          <a
+            href="https://ingood.in/?utm_source=chatgpt.com"
+            target="_blank"
+            class="content-link"
+          >
+            Rohit R Chauhan
+          </a>
+
+          is an entrepreneur and financial innovator known for building modern investing solutions designed around real-life financial behavior. As the Founder of InGood, he focuses on creating systems that make investing more flexible, practical, and less stressful for everyday users.
+        </p>
+
+        <p>
+          His work is driven by the belief that financial products should adapt to people’s lifestyles instead of forcing people to adapt to rigid financial structures.
+        </p>
+
+        <p>
+          Before creating InGood, Rohit R Chauhan closely observed how many individuals struggled to maintain consistent investments despite having the intention to build wealth.
+        </p>
+
+        <p>
+          He identified that unpredictable monthly expenses, irregular income patterns, and fear of losing liquidity were some of the biggest reasons why people stopped investing.
+        </p>
+
+        <p>
+          This understanding inspired him to rethink traditional SIP models and develop a smarter, more adaptive investing approach.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- JOURNEY -->
+
+  <section>
+
+    <div class="container">
+
+      <h2 class="section-title">
+        Investing Philosophy
+      </h2>
+
+      <div class="timeline">
+
+        <div class="timeline-card">
+
+          <h3>
+            Cash Flow Investing
+          </h3>
+
+          <p>
+            Investment systems designed around real monthly affordability instead of rigid commitments.
+          </p>
+
+        </div>
+
+        <div class="timeline-card">
+
+          <h3>
+            Self-Adjusting SIP
+          </h3>
+
+          <p>
+            Smart investing models that adapt according to changing income and spending patterns.
+          </p>
+
+        </div>
+
+        <div class="timeline-card">
+
+          <h3>
+            Liquidity First
+          </h3>
+
+          <p>
+            Helping investors maintain financial confidence while building long-term wealth.
+          </p>
+
+        </div>
+
+        <div class="timeline-card">
+
+          <h3>
+            Adaptive Wealth Creation
+          </h3>
+
+          <p>
+            Creating investing systems that evolve with people’s real financial lives.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- VISION -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="quote-box">
+
+        <h3>
+          The Future of Investing
+        </h3>
+
+        <p>
+          Through the InGood App, Rohit introduced the concept of the Self-Adjusting SIP, a system that automatically adapts investment amounts based on a user’s real cash flow and spending behavior.
+        </p>
+
+        <p>
+          Powered by InGoodfinserv, the platform focuses on cash flow–based investing, intelligent automation, liquidity-first planning, and financial behavior insights to help users invest consistently without financial pressure.
+        </p>
+
+        <p>
+          Today, Rohit R Chauhan continues to share ideas around behavioral finance, investing psychology, and adaptive wealth creation.
+        </p>
+
+        <p>
+          His vision is to make investing simpler, more sustainable, and more accessible for modern investors by building systems that support long-term financial growth while respecting the realities of everyday financial life.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container">
+
+      <p>
+        © 2026 Rohit R Chauhan | Founder of InGood
+      </p>
+
+      <div style="margin-top:18px;">
+
+        <a
+          href="https://www.linkedin.com/in/rohit-r-chauhan-19904852/"
+          target="_blank"
+          class="content-link"
+          style="font-size:16px;"
+        >
+          LinkedIn Profile
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
+```
+
+
